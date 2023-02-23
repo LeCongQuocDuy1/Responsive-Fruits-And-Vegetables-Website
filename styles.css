@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@keyframes hienlentutu {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 62.5%;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --green-color: #3cb815;
+    --light-green-color: #c0eb7b;
+    --light-orange-color: #ff7e00;
+    --text-color: #1a2428;
+    --bg-color: #fff;
+    --box-shadow-around: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+    --box-shadow-bottom: 0px 10px 15px 0 rgb(0 0 0 / 10%);
+    --header-height: 8rem;
+    --transition-hover: all linear 0.3s;
+}
+
+ul {
+    list-style-type: none !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+p {
+    margin: 0;
+    bottom: 0;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.avatar {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+body {
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+.header {
+    height: var(--header-height);
+    background-color: #fff;
+    box-shadow: var(--box-shadow-bottom);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header-container {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10rem;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo i {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--light-orange-color);
+    margin-right: 0.5rem;
+}
+
+.header-logo p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.header-menus {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header-menus li:not(:last-child) {
+    margin: 0 1rem;
+}
+
+.header-menus li a {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--text-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 3.6rem;
+    background-color: transparent;
+}
+
+.header-menus li a:hover,
+.header-menus li a.active {
+    color: #fff;
+    background-color: #3cb815;
+    transition: var(--transition-hover);
+}
+
+.header-infos {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header-infos span {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-right: 1rem;
+}
+
+.header-infos i {
+    font-size: 2rem;
+    font-weight: bold;
+    height: 2.7rem;
+    color: var(--text-color);
+}
+
+.header-infos:hover .header-settings {
+    display: block;
+}
+
+.header-settings {
+    display: none;
+    position: absolute;
+    top: 4.5rem;
+    right: 0;
+    width: 120%;
+    background-color: #fff;
+    box-shadow: var(--box-shadow-around);
+    animation: hienlentutu linear 0.3s;
+}
+
+.header-settings::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1rem;
+    width: 100%;
+    height: 1rem;
+}
+
+.header-settings li a {
+    display: block;
+    font-size: 1.4rem;
+    padding: 1rem 1.5rem;
+    color: var(--text-color);
+}
+
+.header-settings li:nth-child(3) {
+    border-top: 1px solid #ccc;
+}
+
+.header-settings li a:hover {
+    background-color: #d3d3d3;
+    transition: var(--transition-hover);
+}
